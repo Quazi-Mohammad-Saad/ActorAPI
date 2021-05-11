@@ -18,17 +18,11 @@ public class ApiController {
     private RestTemplate restTemplate;
     @Autowired
     private MovieRepository repository;
-    private static String url= "https://api.themoviedb.org/3/discover/movie?api_key=8c4c63a228db55743cff53868b3124af&year=";
+    private static String url= "https://api.themoviedb.org/3/discover/movie?api_key=8c4c63a228db55743cff53868b3124af&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people=";
 
-    //https://api.themoviedb.org/3/discover/movie?api_key=8c4c63a228db55743cff53868b3124af&year=
 
-//    ResponseEntity<Movie[]> response =
-//            restTemplate.getForEntity(
-//                    "http://localhost:8080/yr/",
-//                    Movie[].class);
-//    Movie[] employees = response.getBody();
 
-    @GetMapping("/{yr}") //http://localhost:8082/2000
+    @GetMapping("/{yr}") //http://localhost:8082/500
     public List<Movie> getCountries(@PathVariable int yr){
 //        Object year =restTemplate.getForObject(url+yr,Object.class,"8c4c63a228db55743cff53868b3124af");
 

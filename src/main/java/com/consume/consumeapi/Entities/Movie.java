@@ -10,6 +10,8 @@ public class Movie {
     private String original_title;
     private String release_date;
 
+
+
     public String getRelease_date() {
         return release_date;
     }
